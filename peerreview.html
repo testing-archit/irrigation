@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peer-Reviewed Articles</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a.active {
+            text-decoration: underline;
+        }
+
+        /* Search and Filter Section */
+        #search-filter {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        #search {
+            padding: 10px;
+            font-size: 1em;
+            width: 40%;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #category {
+            padding: 10px;
+            font-size: 1em;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        /* Articles Grid */
+        #articles-list {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .article-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .article-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .article-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .article-content {
+            padding: 20px;
+        }
+
+        .article-content h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .article-content p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .read-more {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Pagination */
+        #pagination {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .pagination a {
+            color: #007BFF;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid #007BFF;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+        .pagination a:hover {
+            background: #007BFF;
+            color: #fff;
+        }
+
+        /* Submission Section */
+        #submission {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 40px 0;
+        }
+
+        #submission h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        #submission p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Peer-Reviewed Articles</h1>
+        <p>Access detailed research and case studies on water-saving methods in agriculture and beyond.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="submit.html">Submit an Article</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search and Filter Section -->
+    <section id="search-filter">
+        <input type="text" id="search" placeholder="Search by title..." onkeyup="filterArticles()">
+        <select id="category" onchange="filterArticles()">
+            <option value="all">All Categories</option>
+            <option value="irrigation">Irrigation</option>
+            <option value="crop production">Crop Production</option>
+            <!-- Add more categories as needed -->
+        </select>
+        <button onclick="filterArticles()">Filter</button>
+    </section>
+
+    <!-- Articles List -->
+    <section id="articles-list">
+        <div class="articles-grid">
+            <div class="article-item">
+                <img src="irrigation-methods.webp" alt="Innovative Irrigation Techniques">
+                <div class="article-content">
+                    <h3><a href="article1.html">Innovative Irrigation Techniques</a></h3>
+                    <p>Publisher: <a href="https://example.com/journal">Water Efficiency Journal</a></p>
+                    <p>An in-depth look at new irrigation strategies that save water.</p>
+                    <a href="article1.html" class="read-more">Read more</a>
+                </div>
+            </div>
+            <div class="article-item">
+                <img src="OIP (4).jpeg" alt="Efficient Water Use in Crop Production">
+                <div class="article-content">
+                    <h3><a href="article2.html">Efficient Water Use in Crop Production</a></h3>
+                    <p>Publisher: <a href="https://example.com/agriculture-today">Agriculture Today</a></p>
+                    <p>Explore how efficient water use can lead to better yields and reduced water consumption.</p>
+                    <a href="article2.html" class="read-more">Read more</a>
+                </div>
+            </div>
+            <!-- Add more articles as needed -->
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <div id="pagination">
+        <div class="pagination">
+            <a href="page1.html">&laquo; Previous</a>
+            <a href="page1.html">1</a>
+            <a href="page2.html">2</a>
+            <a href="page3.html">3</a>
+            <a href="page2.html">Next &raquo;</a>
+        </div>
+    </div>
+
+    <!-- Submission Section -->
+    <section id="submission">
+        <h2>Submit Your Article</h2>
+        <p>If you have research or case studies on water conservation, submit your work to be reviewed and published on our platform.</p>
+        <a href="submit.html" class="button">Submit Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Global Water Efficiency Knowledge Hub. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        // Search and Filter Functionality
+        function filterArticles() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const categoryInput = document.getElementById('category').value.toLowerCase();
+            const articles = document.querySelectorAll('.article-item');
+
+            articles.forEach(article => {
+                const title = article.querySelector('h3').innerText.toLowerCase();
+                const category = article.querySelector('.article-content p:nth-child(6)').innerText.toLowerCase();
+
+                if ((title.includes(searchInput) || searchInput === '') && (category.includes(categoryInput) || categoryInput === 'all')) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

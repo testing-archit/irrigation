@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Conservation Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Water Conservation Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('peer')">Peer-Reviewed Articles</a></li>
+                <li><a href="#" onclick="showSection('tools')">Tools</a></li>
+                <li><a href="#" onclick="showSection('videos')">Videos</a></li>
+                <li><a href="#" onclick="showSection('forum')">Community Forum</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="active">
+            <h2>Welcome to the Water Conservation Platform</h2>
+            <div class="home-content">
+                <div class="home-feature">
+                    <h3>Learn Best Practices</h3>
+                    <p>Explore innovative methods and strategies for conserving water in agriculture, industrial use, and daily life.</p>
+                </div>
+                <div class="home-feature">
+                    <h3>Interactive Tools</h3>
+                    <p>Use our interactive tools to calculate water usage, analyze savings, and develop conservation plans.</p>
+                </div>
+                <div class="home-feature">
+                    <h3>Join the Community</h3>
+                    <p>Collaborate with experts and enthusiasts in our community forum. Share ideas, discuss innovations, and learn from case studies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Peer-Reviewed Articles Section -->
+        <section id="peer">
+            <h2>Peer-Reviewed Articles</h2>
+            <div class="article-list">
+                <article>
+                    <h3>Advances in Water-Saving Technologies</h3>
+                    <p>This article explores the latest innovations in water-efficient irrigation systems, rainwater harvesting, and wastewater recycling.</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article>
+                    <h3>Sustainable Water Management in Agriculture</h3>
+                    <p>Find out how farmers are implementing strategies to reduce water use while maintaining crop yields.</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article>
+                    <h3>Urban Water Conservation Techniques</h3>
+                    <p>Discover methods cities use to manage water consumption effectively and reduce waste.</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article>
+                    <h3>Climate Change and Water Resources</h3>
+                    <p>An in-depth review of the impact of climate change on global water resources and strategies to mitigate these effects.</p>
+                    <a href="#">Read More</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tool Section -->
+        <section id="tools">
+            <h2>Water Conservation Tools</h2>
+            <p>Use these tools to calculate, assess, and plan your water-saving strategies. Our interactive tools provide real-time insights to help you make informed decisions and contribute to water conservation efforts.</p>
+            
+            <div class="tool-container">
+                <!-- Water Usage Calculator -->
+                <div class="tool">
+                    <h3>Water Usage Calculator</h3>
+                    <p>Track your daily water consumption and explore ways to reduce waste. Calculate your water footprint and see how much water you can save by making small changes.</p>
+                    <a href="#" id="waterCalculatorLink">Try the Water Usage Calculator</a>
+                </div>
+                
+                <!-- Water Usage Reduction Planner -->
+                <div class="tool">
+                    <h3>Water Usage Reduction Planner</h3>
+                    <p>Develop a step-by-step plan to reduce water consumption over time. Set goals, track your progress, and see the impact of your water-saving efforts.</p>
+                    <a href="#">Create Your Plan</a>
+                </div>
+
+                <!-- Rainwater Harvesting Calculator -->
+                <div class="tool">
+                    <h3>Rainwater Harvesting Calculator</h3>
+                    <p>Calculate how much water you can collect from rainfall based on the size of your catchment area. Plan an efficient rainwater harvesting system for your home or farm.</p>
+                    <a href="#">Use the Rainwater Calculator</a>
+                </div>
+
+                <!-- Drought Risk Assessment Tool -->
+                <div class="tool">
+                    <h3>Drought Risk Assessment</h3>
+                    <p>Evaluate the risk of drought in your region and get tips on how to prepare. Understand the water usage patterns in high-risk areas and adopt best practices.</p>
+                    <a href="#">Assess Drought Risk</a>
+                </div>
+
+                <!-- Water Efficiency Audit -->
+                <div class="tool">
+                    <h3>Water Efficiency Audit</h3>
+                    <p>Audit your household or workplace's water usage. Identify high water consumption areas and get personalized recommendations for reducing waste.</p>
+                    <a href="#">Start the Audit</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos">
+            <h2>Educational Videos</h2>
+            <div class="video-gallery">
+                <div class="video">
+                    <h3>Water Conservation Tips for Homeowners</h3>
+                    <p>Learn how to save water at home with practical tips and easy-to-implement strategies.</p>
+                </div>
+                <div class="video">
+                    <h3>Smart Irrigation Systems Explained</h3>
+                    <p>Discover how modern irrigation systems are revolutionizing water conservation in agriculture.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Forum Section -->
+        <section id="forum">
+            <h2>Community Forum</h2>
+            <p>Welcome to the Community Forum! Connect with fellow users, share your thoughts, and learn from experts on how to conserve water effectively.</p>
+            
+            <!-- Forum Posts Section -->
+            <div class="forum-container">
+                <div class="forum-post">
+                    <h3>Discuss Water-Saving Techniques</h3>
+                    <p>Share your experiences and tips for reducing water consumption in everyday life.</p>
+                    <a href="#">Join the Discussion</a>
+                </div>
+                <div class="forum-post">
+                    <h3>Ask the Experts</h3>
+                    <p>Have a question about water conservation? Ask our panel of experts for advice and guidance.</p>
+                    <a href="#">Ask a Question</a>
+                </div>
+                <div class="forum-post">
+                    <h3>Share Success Stories</h3>
+                    <p>Have you implemented a water-saving project? Share your story and inspire others to do the same.</p>
+                    <a href="#">Share Your Story</a>
+                </div>
+                <div class="forum-post">
+                    <h3>Latest Technologies for Water Conservation</h3>
+                    <p>Stay updated on the latest technologies and innovations in water conservation.</p>
+                    <a href="#">Explore Technology</a>
+                </div>
+            </div>
+
+            <!-- Add a Comment Section -->
+            <div class="forum-section">
+                <h3>Add a Comment</h3>
+                <p>Contribute to the discussion by sharing your thoughts and feedback.</p>
+                <form onsubmit="addComment(event)">
+                    <textarea id="commentInput" rows="4" placeholder="Write your comment..."></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+                <div id="commentsSection">
+                    <!-- Comments will be added here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feedback, or need further information, feel free to reach out to us. We are here to assist you!</p>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email Us</h3>
+                    <p><i class="fa fa-envelope"></i> support@watersaver.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Call Us</h3>
+                    <p><i class="fa fa-phone"></i> +1-800-123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Visit Us</h3>
+                    <p><i class="fa fa-map-marker"></i> 123 Water Conservation Lane, Eco City, EC 56789</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="text" id="subject" placeholder="Subject" required>
+                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <h3>Connect with Us</h3>
+                <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fa fa-linkedin"></i> LinkedIn</a>
+                <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-item">
+                    <h4>What are your customer service hours?</h4>
+                    <p>Our customer service team is available from 9 AM to 6 PM, Monday through Friday.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How can I learn more about water-saving technologies?</h4>
+                    <p>You can visit our <a href="#">resources page</a> for guides, articles, and videos on water conservation techniques.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Water Usage Calculator Modal -->
+        <div id="waterUsageModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Water Usage Calculator</h2>
+                <form id="waterCalculator">
+                    <label for="shower">Shower (liters):</label>
+                    <input type="number" id="shower" placeholder="Enter liters used for showering" min="0">
+                    
+                    <label for="laundry">Laundry (liters):</label>
+                    <input type="number" id="laundry" placeholder="Enter liters used for laundry" min="0">
+                    
+                    <label for="dishwashing">Dishwashing (liters):</label>
+                    <input type="number" id="dishwashing" placeholder="Enter liters used for dishwashing" min="0">
+                    
+                    <label for="toilet">Toilet Flushes (liters):</label>
+                    <input type="number" id="toilet" placeholder="Enter liters used for toilet flushes" min="0">
+                    
+                    <label for="garden">Gardening (liters):</label>
+                    <input type="number" id="garden" placeholder="Enter liters used for gardening" min="0">
+                    
+                    <button type="button" onclick="calculateWaterUsage()">Calculate</button>
+                </form>
+                <div id="result">
+                    <h4>Total Water Usage: <span id="totalUsage">0</span> liters</h4>
+                    <h4>Potential Savings (10%): <span id="potentialSavings">0</span> liters</h4>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Water Conservation Platform. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
